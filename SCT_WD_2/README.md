@@ -12,7 +12,7 @@ An **interactive and user-friendly** stopwatch web application with **smooth ani
 
 ## 📸 Screenshots  
 
-![Stopwatch Preview](screenshot.png) *(Add an actual screenshot of your project here!)*  
+![Stopwatch Preview](screenshot.png) 
 
 ## 🛠️ Technologies Used  
 
@@ -22,7 +22,7 @@ An **interactive and user-friendly** stopwatch web application with **smooth ani
 
 ## 🚀 Live Demo  
 
-🔗 [View Project](#) *(https://github.com/Mithlesh-95/skillcraft_technology/new/main/SCT_WD_2)*  
+🔗 [View Project](https://github.com/Mithlesh-95/skillcraft_technology/SCT_WD_2)
 
 ## 📂 Installation & Usage  
 
