@@ -1,4 +1,4 @@
-
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,13 +14,13 @@ body {
     justify-content: center;
     color: white;
     overflow: hidden;
+    padding: 1rem;
 }
 
 .container {
     position: relative;
     width: 100%;
     max-width: 28rem;
-    padding: 1rem;
 }
 
 /* Background animations */
@@ -79,7 +79,7 @@ body {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .header {
@@ -93,19 +93,18 @@ body {
 }
 
 .timer-icon {
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     border-radius: 50%;
-    padding: 1rem;
+    padding: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    ring: 4px rgba(255, 255, 255, 0.3);
 }
 
 .timer-icon::before {
@@ -117,14 +116,14 @@ body {
 }
 
 .timer-svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     color: white;
 }
 
 .title {
-    margin-top: 1rem;
-    font-size: 2.25rem;
+    margin-top: 0.75rem;
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
     font-weight: 800;
     background: linear-gradient(to right, #f9a8d4, #d8b4fe, #a5b4fc);
     -webkit-background-clip: text;
@@ -142,7 +141,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     border-radius: 1.5rem;
-    padding: 1.5rem;
+    padding: clamp(1rem, 3vw, 1.5rem);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transform: translateZ(0);
@@ -154,10 +153,10 @@ body {
 }
 
 .time-display {
-    font-size: 3.75rem;
+    font-size: clamp(2.5rem, 8vw, 3.75rem);
     font-family: monospace;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     background: linear-gradient(to right, #fce7f3, #e0e7ff);
     -webkit-background-clip: text;
     color: transparent;
@@ -174,7 +173,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -184,12 +184,13 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 0.75rem;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
     color: white;
     border: none;
     cursor: pointer;
     transition: all 0.3s;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    min-width: max-content;
 }
 
 .btn:hover {
@@ -221,10 +222,11 @@ body {
 .btn-icon {
     width: 1rem;
     height: 1rem;
+    flex-shrink: 0;
 }
 
 .laps-container {
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
     transform: translateZ(0);
     transition: all 0.5s;
 }
@@ -234,7 +236,7 @@ body {
 }
 
 .laps-title {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
     font-weight: 700;
     margin-bottom: 0.75rem;
     background: linear-gradient(to right, #f9a8d4, #d8b4fe);
@@ -258,6 +260,7 @@ body {
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s;
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
 }
 
 .lap-item:hover {
@@ -299,4 +302,24 @@ body {
 
 .laps-list::-webkit-scrollbar-thumb:hover {
     background: #6d28d9;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+    .controls {
+        gap: 0.35rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.75rem;
+    }
+
+    .stopwatch-container {
+        margin: 0 0.5rem;
+    }
+
+    .blob {
+        width: 16rem;
+        height: 16rem;
+    }
 }
